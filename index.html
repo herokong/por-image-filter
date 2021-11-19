@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/9926ca8b27.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/silvia-odwyer/pixels.js@0.8.1/dist/Pixels.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+  <title>POR</title>
+</head>
+<body>
+  <!-- website title -->
+  <header>
+    <h3 class="title">POR IMAGE FILTER</h3>
+    <i class="fas fa-adjust dark-toggler" id="dark-toggler"></i>
+  </header>
+
+  <!-- upload and download button -->
+  <div class="container">
+    <div class="row">
+      <div class=" mb-3 mt-3 col-md-8 col-sm-12 m-auto">
+        <nav class="navbar justify-content-between">
+          <div class="container">
+            <label  class="btn upload-btn" id="upload-btn">
+              <input type="file" id="file-uploader">
+              Choose Picture
+            </label>
+            <label class="nav-brand" id="file-name">Choose Image</label>
+            <button class="btn upload-btn" id="download-btn"><i class="fas fa-arrow-alt-circle-down"></i></button>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- image canvas for holding an image -->
+    <div class="row">
+      <div class="col-md-8 col-sm-12 m-auto">
+        <canvas id="canvas"></canvas>
+      </div>
+
+    <!-- image effect editor interface -->
+      <div class="effect-interface">
+        <div class="effect-info">
+          <label for="brightness" class="effect-label">Brightness <span id="brightness-value" class="effect-value">100</span></label>
+          <input type="range" min="0" max="200" value="100" class="effect-slider form-range" id="brightness" data-scale="%">
+        </div>
+        <div class="effect-info">
+          <label for="brightness" class="effect-label">Contrast <span id="contrast-value" class="effect-value">100</span></label>
+          <input type="range" min="0" max="200" value="100" class="effect-slider form-range" id="contrast" data-scale="%">
+        </div>
+        <div class="effect-info">
+          <label for="brightness" class="effect-label">Blur <span id="blur-value" class="effect-value">0</span></label>
+          <input type="range" min="0" max="100" value="0" class="effect-slider form-range" id="blur" data-scale="px">
+        </div>
+        <div class="effect-info">
+          <label for="brightness" class="effect-label">Saturation <span id="sat-value" class="effect-value">100</span></label>
+          <input type="range" min="0" max="200" value="100" class="effect-slider form-range" id="saturate" data-scale="%">
+        </div>
+        <div class="effect-info">
+          <label for="brightness" class="effect-label">Invert <span id="inv-value" class="effect-value">0</span></label>
+          <input type="range" min="0" max="100" value="0" class="effect-slider form-range" id="invert" data-scale="%">
+        </div>
+        <div class="effect-info">
+          <label for="brightness" class="effect-label">Hue <span id="hue-value" class="effect-value">0</span></label>
+          <input type="range" min="0" max="100" value="0" class="effect-slider form-range" id="hue-rotate" data-scale="deg">
+        </div>
+        <div class="effect-info">
+          <label for="brightness" class="effect-label">Sepia <span id="sepia-value" class="effect-value">0</span></label>
+          <input type="range" min="0" max="100" value="0" class="effect-slider form-range" id="sepia" data-scale="%">
+        </div>
+        <div class="effect-info">
+          <label for="brightness" class="effect-label">GreyScale <span id="gray-value" class="effect-value">0</span></label>
+          <input type="range" min="0" max="100" value="0" class="effect-slider form-range" id="grayscale" data-scale="%">
+        </div>
+      </div>
+    </div>
+
+    <!-- filter container that contains all the filters -->
+    <div class="row filter-holder">
+      <div class="col-md-8 col-sm-12 m-auto filter-interface">
+          <div>
+            <button class="filter-btn btn btn-dark" id="offset_green">
+                Offset Green
+            </button>
+          </div>
+          <div>
+            <button class="filter-btn btn btn-dark" id="solange">
+                Solange
+            </button>
+          </div>
+          <div>
+            <button class="filter-btn btn btn-dark" id="horizontal_lines">
+              Horizontal Lines
+            </button>
+          </div>
+          <div>
+            <button class="filter-btn btn btn-dark" id="extreme_offset_green">
+              Extreme Offset Green
+            </button>
+          </div>
+          <div>
+            <button class="filter-btn btn btn-dark" id="specks_redscale">
+              Specks Redscale
+            </button>
+          </div>
+          <div>
+            <button class="filter-btn btn btn-dark" id="lix">
+              Lix
+            </button>
+          </div>
+          <div>
+            <button class="filter-btn btn btn-dark" id="wood">
+              Wood
+            </button>
+          </div>
+          <div>
+            <button class="filter-btn btn btn-dark" id="bluescale">
+              Bluescale
+            </button>
+          </div>
+          <div>
+            <button class="filter-btn btn btn-dark" id="crimson">
+              Crimson
+            </button>
+          </div>
+          <div>
+            <button class="filter-btn btn btn-dark" id="evening">
+              Evening
+            </button>
+          </div>
+          <div>
+            <button class="filter-btn btn btn-dark" id="perfume">
+              Perfume
+            </button>
+          </div>
+          <div>
+            <button class="filter-btn btn btn-dark" id="pink_aura">
+              Pink Aura
+            </button>
+          </div>
+          <div>
+            <button class="filter-btn btn btn-dark" id="aeon">
+              Aeon
+            </button>
+          </div>
+          <div>
+            <button class="filter-btn btn btn-dark" id="ocean">
+              Ocean
+            </button>
+          </div>
+          <div>
+            <button class="filter-btn btn btn-dark" id="green_min_noise">
+              Green Min Noise
+            </button>
+          </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/silvia-odwyer/pixels.js/dist/Pixels.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+:root {
+  --background-color: #E0F2E9;
+  --holder-color: #F7FFF7;
+
+  /* blue color pallete */
+  --aqua-color: #04ECF0;
+  --turquoise-color: #04D4F0;
+  --bluishgreen-color: #75E6DA;
+  
+  --header-color: #059DC0;
+  /* utils color */
+  --btn-color: #306BAC;
+  --border-color: #D4F1F4;
+  --text-color: whitesmoke;
+}
+
+.dark-theme {
+  --background-color: #343434;
+  --holder-color: #494850;
+  --header-color: #595758;
+  --border-color: #595758;
+  --btn-color: #FF7F7F;
+  color: var(--text-color);
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--background-color);
+  font-family: 'Courier New', monospace;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  padding: 15px;
+  width: 100%;
+  height: 65px;
+  background-color: var(--header-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  color: var(--text-color);
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+.navbar {
+  background-color: var(--holder-color);
+}
+
+.nav-brand {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}
+
+@media (min-width: 400px) {
+  .nav-brand {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-brand {
+    max-width: 750px;
+  }
+}
+
+canvas {
+  margin: auto;
+  background: var(--holder-color);
+  width: 100%;
+  border: 5px solid var(--border-color);
+}
+
+.upload-btn {
+  background-color: var(--btn-color);
+  color: var(--text-color);
+}
+
+#file-uploader {
+  display: none;
+}
+
+.effect-interface {
+  margin: auto;
+  width: 100%;
+  background: var(--holder-color);
+}
+
+.effect-editor {
+  height: 30px;
+  max-width: 140px;
+}
+
+.effect-interface {
+  position: fixed;
+  right: 3px;
+  width: 190px;
+  background: var(--holder-color);
+  border: 5px solid var(--border-color);
+}
+
+.effect-slider::-webkit-slider-thumb {
+  background-color: var(--btn-color);
+}
+
+@media (min-width: 400px) {
+  .effect-slider {
+    height: 30px;
+    max-width: 190px;
+  }
+  .effect-interface {
+    width: 190px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .effect-slider {
+    height: 30px;
+    max-width: 300px;
+  }
+  .effect-interface {
+    width: 330px;
+  }
+}
+
+.effect-value {
+  background-color: var(--background-color);
+}
+
+.filter-holder {
+  margin: 0px 12px;
+}
+
+.filter-interface {
+  background-color: var(--holder-color);
+  border: 5px solid var(--border-color);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background-color: var(--btn-color);
+}
+
+
+.dark-toggler {
+  font-size: 2em;
+}
+
+
