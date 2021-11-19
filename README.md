@@ -1,6 +1,6 @@
 # POR Image Filter
 
-Simple image editor that allows user to apply effects and filters on the picture.
+Simple image editor that allows user to apply effects and filters on the image.
 
 ## Description
 
