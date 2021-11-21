@@ -74,8 +74,9 @@ header {
 
 canvas {
   margin: auto;
+  max-height: calc(100vh - (65px + 86px + 162px));
   background: var(--holder-color);
-  width: 100%;
+  width: auto;
   border: 5px solid var(--border-color);
 }
 
